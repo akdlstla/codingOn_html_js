@@ -1,0 +1,37 @@
+ul li{
+    list-style: none;
+    margin: 16px;
+}
+
+#container{
+    width: 800px;
+    margin: 50px auto;
+}
+legend{
+    text-align: center;
+}
+form{
+    width: 400px;
+    margin: 0 auto;
+}
+fieldset{
+    margin-bottom: 10px;
+}
+
+ul li label{
+    width: 100px;
+    float: left;
+}
+ul li input{
+    width: 140px;
+    height: 20px;
+}
+ul li select{
+    width: 150px;
+    height: 25px;
+}
+button{
+    padding: 5px 10px;
+    cursor: pointer; 
+    /* 마우스포인터 */
+}
