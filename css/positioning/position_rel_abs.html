@@ -34,9 +34,11 @@
             right: 0px;
         }
         #box4{
-            position: absolute;
-            bottom: 0px;
-            right: 0px;
+            /* position: absolute; */
+            /* 브라우저 창 기준 */
+            position: fixed;
+            top: 20px;
+            right: 30px;
         }
         #box5{
             position: absolute;
@@ -46,11 +48,12 @@
     </style>
 </head>
 <body>
+    <!-- 스타일 우선 순위: 인라인 > 내부 > 외부스타일 -->
     <div id="wrap">
         <div id="box1"></div>
         <div id="box2"></div>
         <div id="box3"></div>
-        <div id="box4"></div>
+        <div id="box4" style="background-color: red;"></div>
         <div id="box5"></div>
     </div>
 </body>

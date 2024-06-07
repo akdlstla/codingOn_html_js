@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position: relative 예제</title>
+    <style>
+        div.box{
+            width: 100px;
+            height: 100px;
+        }
+        .red-box{
+            background-color: red;
+        }
+        .green-box{
+            background-color: green;
+            /* 브라우저 창이 기준 */
+            /* position: absolute; */
+            /* 자기 자신이 기준(좌측 상단에 출발) */
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 너비가 100px인 빨간색 정사각형 생성해주세요 -->
+    <div class="box red-box"></div>
+    <div class="box green-box"></div>
+</body>
+</html>
