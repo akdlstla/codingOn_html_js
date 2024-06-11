@@ -1,0 +1,286 @@
+ @charset "utf-8";
+
+ /* 모바일 기기 기준 */
+ /* 공통 스타일 */
+ *{
+    margin: 0; padding: 0;
+ }
+ a{text-decoration: none; color: #f2f2f2;}
+ ul li{
+    list-style: none;
+ }
+ #container{
+    width: 100%;
+    margin: 0 auto;
+ }
+ header{
+    height: 240px;
+    background: rgb(1,1,100);
+ }
+ header #logo{
+    width: 10%;
+    height: 240px;
+    float: left;
+    margin-top: 5px;
+    padding-left: 20px;
+ }
+ header #logo h1{
+    font-size: 26px;
+ }
+ header #logo h1 a:hover{
+    color: yellowgreen;
+ }
+ header nav{
+    width: 76%;
+    height: 240px;
+    float: left;
+    margin-top: 40px;
+    
+ }
+ header nav ul{
+    text-align: center;
+ }
+ header nav ul li a{
+    display: block;
+    padding: 12px;
+ }
+ header nav ul li a:hover{
+    background-color: skyblue;
+    border-radius: 3px;
+ }
+ #container #main{
+    width: 90%;
+    margin: 0 auto;
+ }
+ /* 가변 크기(%) 부모의 상대 비율대로 크기를 정함 */
+ /* 90% x 90% = 81% */
+#container #main #contents{
+    width: 90%;
+    margin: 0 auto;
+}
+#main #contents h2{
+    text-align: center;
+    font-size: 21px;
+}
+footer{
+    margin-top: 100px;
+    height: 150px;
+    border-top: 2px solid #222;
+}
+footer #footer_menu{
+    margin: 10px 20px;
+}
+footer #footer_menu li a{
+    color: #444;
+}
+footer #footer_menu li{
+    float: left;
+    border-right: 2px solid #ccc;
+    margin: 10px 0px;
+    padding: 0px 10px;
+}
+footer #footer_menu li:last-child{
+    border: none;
+}
+
+/* index 스타일 */
+#main #contents .main_pic{
+    width: 400px;
+    margin: 20px auto;
+}
+#main #contents .main_pic img{
+    width: 400px;
+    height: 350px;
+    border-radius: 4px;
+}
+/* product 스타일 */
+#main #contents #strawberry img{
+    width: 300px;
+    height: 300px;
+}
+#main #contents #watermelon h3{
+    color:red
+}
+#main #contents #strawberry h3{
+    color:red
+}
+/* board 스타일 */
+#contents table {
+   width: 400px; 
+   border: 2px solid #ccc;
+   border-collapse: collapse;
+}
+#contents table th, td{
+    border: 2px solid #ccc;
+    padding: 10px 5px;
+}
+#contents table thead{
+    background-color: #eee;
+}
+#contents h2{
+    text-align: center;
+    margin-bottom: 30px;
+    /* td:nth-of-child(2), nth-of-type(2) */
+}
+#contents table tr {
+    text-align: center;
+}
+#contents table tr td:nth-of-type(2){
+    text-align: left;
+}
+/* 로그인 스타일 */
+#contents #login_h1{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+#contents form{
+    width: 400px;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    margin-bottom: 100px;
+}
+#contents form ul{
+    padding: 10px 20px;
+}
+#contents form ul li{
+    margin: 20px;
+}
+#contents form label{
+    width: 80px;
+    float: left;
+}
+/* 속성 선택자(태그[속성='속성값']) */
+#contents form input[type='text'], input[type='password']{
+    width: 200px;
+    height: 25px;
+    padding: 0 5px;
+}
+#contents form input[type='submit'], input[type='reset']{
+    padding: 10px 20px;
+}
+/* pc 기준 */
+@media screen and (min-width: 768px) {
+    header{
+        height: 80px;
+    }
+    header #logo{
+        height: 80px;
+        padding-left: 40px;
+        line-height: 80px;
+        margin-top: 0;
+    }
+    header #logo h1 a{
+        font-size: 28px;
+    }
+    header nav{
+        height: 80px;
+        line-height: 80px;
+        margin-top: 0;
+    }
+    header nav ul{
+        padding-left: 350px;
+    }
+    header nav ul li{
+        float: left;
+    }
+    header nav ul li a{
+        padding: 0 30px;
+    }
+    #container #main{
+        width: 1000px;
+    }
+    #container #main #contents{
+        width: 900px;
+    }
+    #main #contents h2{
+        margin-top: 30px;
+        font-size: 26px;
+    }
+
+    #main #contents .main_pic{
+        width: 550px;
+        margin: 20px auto;
+    }
+    #main #contents .main_pic img{
+        width: 550px;
+        height: 500px;
+    }
+    /* product 스타일 */
+    #main #contents .product_h1{
+        text-align: left;
+    }
+
+    #contents #watermelon, #strawberry{
+        height: 350px;
+    }
+    #contents #watermelon img, #strawberry img{
+        float: left;
+        width: 300px;
+        height: 300px;
+        margin-right: 16px;
+        border-radius: 6px;
+    }
+    #contents #watermelon p, #strawberry p{
+        line-height: 1.5;
+    }
+    #contents #watermelon h3, #strawberry h3{
+        margin-bottom: 10px;
+    }
+
+    
+    /* board 스타일 */
+#contents table{
+    width: 700px;
+    border: 2px solid #ccc;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+#contents table th, td{
+    border: 2px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+#contents table thead{
+    background-color: #eee;
+}
+#contents h2{
+    text-align: center;
+    margin: 20px;
+    /* td:nth-of-child(2), nth-of-type(2) */
+}
+#contents table tr td:nth-of-type(2){
+    text-align: left;
+}
+/* 로그인 스타일 */
+#contents #login_h1{
+    width: 100%;
+    margin: 50px auto;
+    text-align: center;
+}
+#contents form{
+    width: 440px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    margin-bottom: 300px;
+}
+#contents form ul{
+    padding: 20px 40px;
+}
+#contents form ul li{
+    margin: 20px;
+}
+#contents form label{
+    width: 80px;
+    float: left;
+}
+/* 속성 선택자(태그[속성='속성값']) */
+#contents form input[type='text'], input[type='password']{
+    width: 200px;
+    height: 25px;
+    padding: 0 5px;
+}
+#contents form input[type='submit'], input[type='reset']{
+    padding: 5px 8px;
+}
+}
