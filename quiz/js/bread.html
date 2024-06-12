@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산술연산 실습 예제</title>
+</head>
+<body>
+    
+    <script>
+        let bread = 20;
+        let people = 3;
+
+        //자료형(type)의 크기 - 객체 > 문자 > 실수 > 정수
+        //형변환 - 자동형변환(작은자료형 -> 큰자료형),
+        //강제 형변환(큰자료형 -> 작은자료형)
+        document.write("각자 빵의 개수: " + parseInt(bread / people) + "<br>");
+        document.write("남은 빵의 개수: " + Number(bread % people) + "<br>");
+    </script>
+</body>
+</html>
