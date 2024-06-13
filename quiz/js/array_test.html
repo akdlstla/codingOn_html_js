@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let color = ["red" , "orange" , "yellow", "green", "blue", "navy", "purple" , "black"];
+
+        console.log(color[2]);
+        color.push("pink");
+        for(let i=0;i<color.length;i++){
+            console.log(color[i]);
+        }
+
+        console.log(color.indexOf("black"));
+
+        console.log(color.pop());
+
+        let color2 = color.reverse();
+        console.log(color2);
+        console.log(color);
+        
+        
+
+        //문자열 - 1차원 배열
+
+        let str = "Hello world, welcome world";
+
+        //indexOf() - 앞에서 찾음
+        //lastIndexOf() - 뒤에서 찾음
+        console.log(str.indexOf("world")); //6
+        console.log(str.indexOf("asia")); //-1
+        console.log(str.lastIndexOf("world")); //21
+        
+        
+        
+    </script>
+</body>
+</html>
