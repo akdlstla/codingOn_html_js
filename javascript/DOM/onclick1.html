@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- html 태그로 onclick 이동해서 이벤트 실행 -->
+     <div id="contents">
+        <img src="images/복숭아.jpg" alt="복숭아" 
+        onclick="changePic()" id="fruit">
+     </div>
+     <script>
+        function changePic(){
+           let fruitImg = document.querySelector("#fruit");
+           fruitImg.src = "images/블루베리.jpg";
+        }
+     </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 자바스크립트의 객체의 속성인 onclick 이동해서 이벤트 실행 -->
+     <div id="contents">
+        <img src="images/복숭아.jpg" alt="복숭아" id="fruit">
+     </div>
+     <script>
+      let fruitImg = document.querySelector("#fruit");
+      //changePic 함수에서 ()를 하면 함수 맨위로 올라가서 실행됨(호이스트)
+      //함수 정의
+      /*
+      function changePic(){
+         fruitImg.src = "images/블루베리.jpg"
+      }
+
+      //함수 호출
+      fruitImg.onclick = changePic; */
+
+      //toggle 기능 구현하기
+      let sw = true; //상태 변수
+      fruitImg.onclick = function(){
+         if(sw){
+            fruitImg.src= "images/블루베리.jpg";
+            sw=false;
+         }else{fruitImg.src= "images/복숭아.jpg";
+         sw=true;
+      }
+      }
+
+
+     </script>
+</body>
+</html>
