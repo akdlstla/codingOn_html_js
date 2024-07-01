@@ -7,12 +7,12 @@
 </head>
 <body>
     <script>
-        console.log(1);
+        // console.log(1);
         //setTimeout(code, delay): delay 시간동안 기다렸다가 code를 실행(콜백함수)
-        setTimeout(function(){
-            console.log(2);
-        }, 3000);
-        console.log(3);
+        // setTimeout(function(){
+            // console.log(2);
+        // }, 3000);
+        // console.log(3);
 
         //문제점이 있는 코드
         /*
@@ -42,15 +42,15 @@
         //콜백함수는 함수타입 파라미터 맨 마지막에 하나 더 선언
         //함수가 실행을 끝낸 후 실행되는 함수
 
-        function mainFunc(param1, param2, callback) {
-            console.log(param1);
-            console.log(param2);
-            callback();
-        }
-        function callbackFunc(){
-            console.log('콜백함수입니다.');
-        }
-        mainFunc(1,2, callbackFunc);
+        // function mainFunc(param1, param2, callback) {
+        //     console.log(param1);
+        //     console.log(param2);
+        //     callback();
+        // }
+        // function callbackFunc(){
+        //     console.log('콜백함수입니다.');
+        // }
+        // mainFunc(1,2, callbackFunc);
         //콜백을 사용하는 이유
         //1. 비동기 작업의 완료를 처리하기 위해
         //2. 비동기 작업의 순서를 제어하기 위해
@@ -65,11 +65,12 @@
                 product = '제로콜라';
                 price = 3000;
                 cb(product,price);
+                // cb + 1
             }, 3000);
         }
         //기명함수 방법
-        function payCallback(product, price){
-            console.log(`상품명: ${product}, 가격: ${price}`);
+        function payCallback(a, b){
+            console.log(`상품명: ${a}, 가격: ${b}`);
         }
         
         let product;
@@ -77,9 +78,22 @@
 
         goMart();
         pickDrink(payCallback);
+        // payCallback(product,price);
         // pickDrink(function (product,price){
         //     console.log(`상품명: ${product}, 가격: ${price}`);
         // });
+
+        // pickDrink(paycallback)
+        // settimeout
+        // 고민끝
+        // product = 제로콜라
+        // price = 3000
+        // paycallback(product, price)
+        // 콘솔로그(상품명: product, 가격:price)
+
+
+
+
 
     </script>
 </body>

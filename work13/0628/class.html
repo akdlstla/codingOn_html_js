@@ -88,6 +88,38 @@
         }
         let rec1 = new Shape(3,4);
         console.log(rec1.getArea());
+
+        class Rectangle extends Shape{
+            getArea(){
+                return this.witdh * this.length
+            }
+            getDiagonal(){
+                return Math.sqrt(this.witdh*this.witdh + this.length*this.length)
+            }
+        }
+        let rec2 = new Rectangle(3,4);
+        console.log(rec2.getDiagonal());
+        
+        class Triangle extends Shape{
+
+            getArea(){
+                return (this.witdh * this.length)/2
+            }
+        }
+        let tri = new Triangle(3,4);
+        console.log(tri.getArea());
+
+        class circle extends Shape{
+            constructor(witdh,length,radius){
+                super(witdh, length)
+                this.radius = radius
+            }
+            getArea(){
+                return (this.witdh*this.length/4)*this.radius;
+            }
+        }
+        let cir = new circle(3,4,3.14);
+        console.log(cir.getArea());
     </script>
 </body>
 </html>
